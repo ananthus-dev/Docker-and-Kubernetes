@@ -1,6 +1,9 @@
 FROM node:14-alpine
 
-#copy everything from build context to current working diretory inside the container
+#if the folder doesnot exist, it will be created
+WORKDIR /usr/app
+
+#now the second path is relative to the WORKDIR
 COPY ./ ./
 RUN npm install
 
