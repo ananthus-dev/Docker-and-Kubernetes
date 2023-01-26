@@ -3,6 +3,7 @@ services:
   redis-server:
     image: "redis"
   node-app:
+    restart: always
     build: . #build using the Docker file in the current directory
     ports:
       - "4001:8081" #connect 4001 in computer to 8081 in container
