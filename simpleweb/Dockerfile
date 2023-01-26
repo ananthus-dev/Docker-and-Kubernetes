@@ -4,7 +4,9 @@ FROM node:14-alpine
 WORKDIR /usr/app
 
 #now the second path is relative to the WORKDIR
-COPY ./ ./
+COPY ./package.json ./
 RUN npm install
+
+COPY ./ ./
 
 CMD ["npm","start"]
