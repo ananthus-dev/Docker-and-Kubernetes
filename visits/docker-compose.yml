@@ -1,0 +1,8 @@
+version: "3" #versin of docker compose that we are going to use
+services:
+  redis-server:
+    image: "redis"
+  node-app:
+    build: . #build using the Docker file in the current directory
+    ports:
+      - "4001:8081" #connect 4001 in computer to 8081 in container
